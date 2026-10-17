@@ -1,0 +1,31 @@
+[project]
+name = "sales-report"
+version = "0.1.0"
+description = "売上CSVを自動集計し、AI（Claude）の所見つきExcelレポートを作成するツール"
+readme = "README.md"
+authors = [
+    { name = "mugitsushima", email = "108912418+mugitsushima@users.noreply.github.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=1.15.0",
+    "openpyxl>=3.1.5",
+    "pydantic>=2.14.1",
+]
+
+[project.scripts]
+sales-report = "sales_report.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.8.0,<0.9"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
