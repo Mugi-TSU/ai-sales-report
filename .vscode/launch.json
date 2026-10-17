@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "お試し実行（APIキー不要）",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "sales_report.cli",
+      "args": ["data/sample_sales.csv", "-o", "output/sales_report.xlsx", "--mock"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "AIで実行（.env の APIキーを使用）",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "sales_report.cli",
+      "args": ["data/sample_sales.csv", "-o", "output/sales_report.xlsx"],
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
