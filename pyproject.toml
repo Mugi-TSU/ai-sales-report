@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "売上CSVを自動集計し、AI（Claude）の所見つきExcelレポートを作成するツール"
 readme = "README.md"
 authors = [
-    { name = "mugitsushima", email = "108912418+mugitsushima@users.noreply.github.com" }
+    { name = "Mugi-TSU", email = "206969332+Mugi-TSU@users.noreply.github.com" }
 ]
 requires-python = ">=3.11"
 dependencies = [
